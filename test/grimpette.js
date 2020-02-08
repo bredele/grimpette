@@ -25,8 +25,13 @@ test('should return given url if not index of root', assert => {
 })
 
 test('should go back when root index of url', assert => {
-  assert.plan(2)
+  assert.plan(4)
   const router = grimpette('/foo')
   assert.equal(router('/foo/bar/beep'), '/foo/bar/beep')
   assert.equal(router('/foo'), '/foo/bar')
+  assert.equal(router('/foo'), '/foo')
+  assert.equal(router('/foo'), '/foo')
 })
+
+
+test('should ')
