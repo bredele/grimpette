@@ -1,7 +1,7 @@
 {
   "name": "grimpette",
   "version": "1.0.0",
-  "description": "Application router without the complicated stuff",
+  "description": "Lousy application router without the complicated stuff",
   "main": "index.js",
   "scripts": {
     "test": "tape test/*.js"

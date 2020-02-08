@@ -24,7 +24,7 @@ test('should return given url if not index of root', assert => {
   assert.equal(router('/hello'), '/hello')
 })
 
-test('should go back when root index of url', assert => {
+test('should go back when url equal to root', assert => {
   assert.plan(4)
   const router = grimpette('/foo')
   assert.equal(router('/foo/bar/beep'), '/foo/bar/beep')
@@ -33,10 +33,18 @@ test('should go back when root index of url', assert => {
   assert.equal(router('/foo'), '/foo')
 })
 
-
-test('should for route to given url', assert => {
+test('should force url', assert => {
   assert.plan(1)
   const router = grimpette('/foo')
   router('/foo/bar/beep')
   assert.equal(router('/foo', true), '/foo')
+})
+
+test('should cache url and return to it if url not index of root', assert => {
+  assert.plan(3)
+  const router = grimpette('/foo')
+  router('/foo/bar/beep/boop')
+  assert.equal(router('/foo'), '/foo/bar/beep')
+  assert.equal(router('/hello/world'), '/hello/world')
+  assert.equal(router('/foo'), '/foo/bar/beep')
 })
