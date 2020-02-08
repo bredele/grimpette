@@ -17,3 +17,9 @@ test('should change root path', assert => {
   const router = grimpette('/hello')
   assert.equal(router(), '/hello')
 })
+
+test('should return root if given root is the same', assert => {
+  assert.plan(1)
+  const router = grimpette('/hello')
+  assert.equal(router('/hello'), '/hello')
+})
