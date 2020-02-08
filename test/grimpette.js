@@ -40,11 +40,12 @@ test('should force url', assert => {
   assert.equal(router('/foo', true), '/foo')
 })
 
-test('should cache url and return to it if url not index of root', assert => {
-  assert.plan(3)
+test('should pause and resume router', assert => {
+  assert.plan(4)
   const router = grimpette('/foo')
   router('/foo/bar/beep/boop')
   assert.equal(router('/foo'), '/foo/bar/beep')
   assert.equal(router('/hello/world'), '/hello/world')
   assert.equal(router('/foo'), '/foo/bar/beep')
+  assert.equal(router('/foo'), '/foo/bar')
 })

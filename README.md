@@ -3,7 +3,6 @@
 > [![Build Status](https://travis-ci.org/bredele/grimpette.svg?branch=master)](https://travis-ci.org/bredele/grimpette)
 [![NPM](https://img.shields.io/npm/v/grimpette.svg)](https://www.npmjs.com/package/grimpette)
 [![Downloads](https://img.shields.io/npm/dm/grimpette.svg)](http://npm-stat.com/charts.html?package=grimpette)
-[![pledge](https://bredele.github.io/contributing-guide/community-pledge.svg)](https://github.com/bredele/contributing-guide/blob/master/community.md)
 
 Lousy router without the complicated stuff.
 
@@ -12,35 +11,27 @@ Lousy router without the complicated stuff.
 ```js
 const grimpette = require('grimpette')
 const router = grimpette('/foo')
+
+/* set url and go back up */
 router('/foo/bar/beep/boop')
 // => /foo/bar/beep/boop
 router('/foo')
 // => /foo/bar/beep
+
+/* pause and resume */
 router('/hello/world')
 // => /hello/world
 router('/foo')
 // => /foo/bar/beep
 ```
 
-
-
 ## Installation
 
 ```shell
-npm install vomit --save
+npm install grimpette --save
 ```
 
-[![NPM](https://nodei.co/npm/vomit.png)](https://nodei.co/npm/vomit/)
-
-## Question
-
-For questions and feedback please use the [Gitter chat room](https://gitter.im/vomitjs/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link) or our [twitter account](https://twitter.com/bredeleca). For support, bug reports and or feature requests please make sure to read our
-<a href="https://github.com/bredele/contributing-guide/blob/master/community.md" target="_blank">community guideline</a> and use the issue list of this repo and make sure it's not present yet in our reporting checklist.
-
-
-## Contribution
-
-Vomit is an open source project and would not exist without its community. If you want to participate please make sure to read our <a href="https://github.com/bredele/contributing-guide/blob/master/community.md" target="_blank">guideline</a> before making a pull request. If you have any vomit-related project, component or other let everyone know on our [chat room](https://gitter.im/vomitjs/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link) or in our wiki.
+[![NPM](https://nodei.co/npm/grimpette.png)](https://nodei.co/npm/grimpette/)
 
 ## License
 
