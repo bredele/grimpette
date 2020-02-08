@@ -12,16 +12,16 @@ test('should return root path', assert => {
   assert.equal(router(), '/')
 })
 
-test('should return root if given root is the same', assert => {
+test('should return given url if index of root', assert => {
   assert.plan(1)
   const router = grimpette('/hello')
   assert.equal(router('/hello'), '/hello')
 })
 
-test('should return url if in a different path', assert => {
+test('should return given url if not index of root', assert => {
   assert.plan(1)
-  const router = grimpette('/hello')
-  assert.equal(router('/foo'), '/foo')
+  const router = grimpette('/foo')
+  assert.equal(router('/hello'), '/hello')
 })
 
 // test('should change root path', assert => {
