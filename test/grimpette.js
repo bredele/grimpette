@@ -34,4 +34,9 @@ test('should go back when root index of url', assert => {
 })
 
 
-test('should ')
+test('should for route to given url', assert => {
+  assert.plan(1)
+  const router = grimpette('/foo')
+  router('/foo/bar/beep')
+  assert.equal(router('/foo', true), '/foo')
+})

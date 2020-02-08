@@ -2,7 +2,8 @@
 
 module.exports = (root = '/') => {
   let path = root
-  return (url = '/') => {
+  return (url = '/', force) => {
+    if (force) return url
     if (url === root && path !== root) {
       const arr = path.split('/')
       arr.pop()
