@@ -1,0 +1,29 @@
+{
+  "name": "grimpette",
+  "version": "1.0.0",
+  "description": "Application router without the complicated stuff",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bredele/grimpette.git"
+  },
+  "keywords": [
+    "router",
+    "navigation",
+    "application",
+    "native",
+    "web"
+  ],
+  "author": "Olivier Wietrich",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bredele/grimpette/issues"
+  },
+  "homepage": "https://github.com/bredele/grimpette#readme",
+  "devDependencies": {
+    "tape": "^4.13.0"
+  }
+}
